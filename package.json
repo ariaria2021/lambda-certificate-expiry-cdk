@@ -1,0 +1,29 @@
+{
+  "name": "lambda-certificate-expiry-cdk",
+  "version": "1.0.0",
+  "description": "Fail CDK synthesis when public certificates bundled with a Lambda expire too soon.",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "synth": "cdk synth AppStoreServerCertificateGuardStack --quiet",
+    "test:certificate-synth": "node labs/03-app-store-server-certificate-guard/scripts/test-cdk-synth.mjs"
+  },
+  "dependencies": {
+    "@apple/app-store-server-library": "^3.1.0",
+    "aws-cdk-lib": "^2.262.1",
+    "constructs": "^10.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "aws-cdk": "^2.1100.0",
+    "esbuild": "^0.27.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3",
+    "vitest": "^5.0.0"
+  }
+}
